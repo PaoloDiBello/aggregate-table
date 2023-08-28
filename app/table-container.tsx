@@ -41,7 +41,7 @@ const TableContainer = ({ activities }: { activities: Activities }) => {
   return (
     <Card sx={{ height: "100%" }}>
       <CardContent>
-        <Grid xs={12} sm={6} lg={3}>
+        <Grid xs={12} sm={6} lg={3} item>
           <Paper>
             <Stack
               alignItems="flex-start"
