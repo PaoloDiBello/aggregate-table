@@ -1,5 +1,8 @@
+"use client";
 import "./globals.css";
 import type { Metadata } from "next";
+import { createTheme } from "@/theme";
+import { ThemeProvider, CssBaseline } from "@mui/material";
 
 export const metadata: Metadata = {
   title: "Aggregate Table",
@@ -11,9 +14,13 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const theme = createTheme();
   return (
     <html lang="en">
-      <body>{children}</body>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <body>{children}</body>
+      </ThemeProvider>
     </html>
   );
 }
